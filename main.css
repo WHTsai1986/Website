@@ -72,7 +72,7 @@ header {
     color: #000000;
     padding: 10px 20px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     transition: background 0.3s ease;
     border-radius: 4px;
 }
@@ -266,4 +266,24 @@ header {
 /* 懸停時顯示下拉選單 */
 .nav-item:hover .dropdown {
     display: block;
+}
+
+
+/* 預設字體大小（適用於桌面和較大螢幕） */
+.nav-link {
+    font-size: 18px; /* 預設字體大小 */
+}
+
+/* 在螢幕寬度小於768px時（手機和平板）縮小字體 */
+@media (max-width: 768px) {
+    .nav-link {
+        font-size: 16px; /* 在較小螢幕上縮小字體大小 */
+    }
+}
+
+/* 在螢幕寬度小於480px時（小型手機）進一步縮小字體 */
+@media (max-width: 480px) {
+    .nav-link {
+        font-size: 14px; /* 在小型手機上再縮小字體大小 */
+    }
 }

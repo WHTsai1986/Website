@@ -1,0 +1,269 @@
+/* 全局樣式 */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+header {
+    position: relative;
+    z-index: 10;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 10px 0;
+    background-color: #007bff;
+    border: 1px solid #0e24e7;
+    min-width: 150px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 15;
+}
+
+.dropdown li a {
+    color: #333; /* 設定下拉選單字體顏色為深灰 */
+    text-decoration: none;
+    display: block;
+    padding: 5px 20px;
+    transition: color 0.3s;
+}
+
+.dropdown li a:hover {
+    color: #007bff; /* 設定懸停時的字體顏色 */
+}
+
+
+.jumbotron {
+    position: relative;
+    z-index: 1;
+}
+
+.logo-brand img {
+    height: 100px;
+    margin-right: 20px;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+/* 導航欄樣式 */
+.list-row {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 20px;
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background 0.3s ease;
+    border-radius: 4px;
+}
+
+.nav-link:hover {
+    background-color: #80e5a7;
+}
+
+/* 橫幅（Jumbotron）樣式 */
+.jumbotron {
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    padding: 120px 20px;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/banner.jpg');
+}
+
+.jumbotron h2 {
+    font-size: 2.8em;
+    margin: 0;
+}
+
+.jumbotron h3 {
+    font-size: 1.6em;
+    font-weight: normal;
+    margin: 20px 0;
+    opacity: 0.9;
+}
+
+.jumbotron p {
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+.btn-tri {
+    background-color: #28a745;
+    color: #fff;
+    padding: 14px 28px;
+    font-size: 1.1em;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-tri:hover {
+    background-color: #218838;
+}
+
+/* 服務、課程區塊 */
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h3 {
+    font-size: 2em;
+    color: #333;
+}
+
+.section-heading .title-en {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.puzzle-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.pz-item {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    width: 300px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    background-color: #fff;
+}
+
+.pz-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.pz-item:hover {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.pz-item .title {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #0056b3;
+}
+
+/* 教練介紹區塊 */
+.section .col-md-4 {
+    text-align: center;
+    padding: 20px;
+}
+
+.section .col-md-4 img {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section .col-md-4 h4 {
+    font-size: 1.5em;
+    color: #0056b3;
+    margin: 10px 0;
+}
+
+.section .col-md-4 p {
+    color: #666;
+}
+
+/* 聯絡表單樣式 */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0056b3;
+    color: #fff;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0044a3;
+}
+
+/* 下拉選單樣式 */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 10px 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    min-width: 150px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.dropdown li {
+    padding: 5px 20px;
+}
+
+.dropdown li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown li a:hover {
+    color: #0056b3;
+}
+
+/* 懸停時顯示下拉選單 */
+.nav-item:hover .dropdown {
+    display: block;
+}

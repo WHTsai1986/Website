@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>網球教練團隊 - 專業教練課程</title>
     <meta name="description" content="專業網球教練團隊，提供個性化的網球課程，適合所有年齡和水平的學員">
-    <!-- 引入 Bootstrap 和主要樣式 -->
-    <link rel="stylesheet" href="./首頁 ｜倍米科技 - AI智慧電池管理系統_files/bootstrap.css">
-    <link rel="stylesheet" href="main.css"> <!-- 確認 main.css 已正確連結 -->
+    <link rel="stylesheet" href="path/to/bootstrap.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
     <header>
-        <nav>
+        <nav aria-label="Main Navigation">
             <div class="menu-list">
                 <div class="container-fluid">
                     <div class="inner">
@@ -26,7 +25,6 @@
                                 <a href="#about" class="nav-link">關於我們</a>
                                 <ul class="dropdown">
                                     <li><a href="#teaching-philosophy">教學理念</a></li>
-                                    <li><a href="#history">歷史沿革</a></li>
                                     <li><a href="#future">未來展望</a></li>
                                 </ul>
                             </li>
@@ -38,17 +36,23 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
+                                <a href="#students" class="nav-link">學員介紹</a>
+                                <ul class="dropdown">
+                                    <li><a href="student_huang_yan_shu.html">黃彥舒</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
                                 <a href="#services" class="nav-link">課程服務</a>
                                 <ul class="dropdown">
-                                    <li><a href="#beginner">初學者課程</a></li>
+                                    <li><a href="#beginner">初學課程</a></li>
                                     <li><a href="#advanced">進階課程</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
                                 <a href="#contact" class="nav-link">聯絡我們</a>
                                 <ul class="dropdown">
-                                    <li><a href="https://line.me/ti/p/YourLineID" target="_blank">Line</a></li> <!-- 替換為您的 Line 連結 -->
-                                    <li><a href="#contact">社交媒體</a></li> <!-- 假設指向頁面中的社交媒體 QR Code 區塊 -->
+                                    <li><a href="https://line.me/ti/p/YourLineID" target="_blank" aria-label="Open Line in new tab">Line</a></li>
+                                    <li><a href="#contact">社交媒體</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -60,7 +64,6 @@
 
     <div class="jumbotron">
         <div class="inner">
-            <!-- 主橫幅背景 -->
             <div class="banner-img" style="background-image: url('images/banner.jpg');"></div>
             <div class="bn-title">
                 <h2>專業網球教練團隊</h2>
@@ -78,17 +81,15 @@
                     <div class="col-12">
                         <div class="section-heading heading-center">
                             <h3 class="title-ch">熱門課程</h3>
-                            
                             <p class="desc">我們提供從入門到進階的網球課程，滿足不同需求的學員。</p>
                             <hr>
                         </div>
                     </div>
                 </div>
                 <div class="puzzle-row">
-                    <!-- 課程圖片 -->
                     <a href="#beginner-course" class="pz-item active">
                         <img src="images/course_beginner.jpg" alt="初學者課程">
-                        <span class="title">初學者課程</span>
+                        <span class="title">初學課程</span>
                     </a>
                     <a href="#intermediate-course" class="pz-item">
                         <img src="images/course_advanced.jpg" alt="進階課程">
@@ -108,14 +109,12 @@
                     <div class="col-12">
                         <div class="section-heading heading-center">
                             <h3 class="title-ch">教練介紹</h3>
-                            
                             <p class="desc">我們的專業教練團隊，擁有豐富的教學經驗和專業知識。</p>
                             <hr>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <!-- 教練圖片 -->
                     <div class="col-md-4">
                         <img src="images/coach1.jpg" alt="教練 1">
                         <h4>孫穎</h4>
@@ -135,39 +134,49 @@
             </div>
         </section>
 
-<section id="contact" class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <div class="section-heading">
+        <!-- 學員介紹移動到聯絡我們上方 -->
+        <section id="students" class="section">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h3 class="title-ch">學員介紹</h3>
+                    <p class="desc">我們的學員們在不同階段的成就。</p>
+                    <hr>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center">
+                        <a href="student_huang_yan_shu.html" class="student-link">
+                            <img src="images/student_huang_yan_shu.jpg" alt="黃彥舒的照片" class="student-photo">
+                            <h4>黃彥舒</h4>
+                            <p>進階課程學員</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-heading text-center">
                     <h3 class="title-ch">聯絡我們</h3>
-                    
                     <p class="desc">掃描以下 QR Code 以訪問我們的社交媒體。</p>
                     <hr>
                 </div>
+                <div class="social-links" style="display: flex; justify-content: center; gap: 40px;">
+                    <div class="text-center">
+                        <a href="https://www.facebook.com/YourPage" target="_blank" aria-label="Visit our Facebook">
+                            <img src="images/facebook_qr_code.png" alt="Facebook QR Code" style="width: 200px; height: 200px;">
+                        </a>
+                        <p>關注我們的 Facebook</p>
+                    </div>
+                    <div class="text-center">
+                        <a href="https://www.instagram.com/suntenniscoaching/" target="_blank" aria-label="Visit our Instagram">
+                            <img src="images/instagram_qr_code.png" alt="Instagram QR Code" style="width: 200px; height: 200px;">
+                        </a>
+                        <p>關注我們的 Instagram</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="row justify-content-between align-items-center">
-            <!-- Facebook QR Code 靠左 -->
-            <div class="col-md-4 text-center">
-                <a href="https://www.facebook.com/YourPage" target="_blank"> <!-- 替換為您的 Facebook 頁面連結 -->
-                    <img src="images/facebook_qr_code.png" alt="Facebook QR Code" style="width: 200px; height: 200px;">
-                </a>
-                <p>關注我們的 Facebook</p>
-            </div>
-            <!-- Instagram QR Code 靠右 -->
-            <div class="col-md-4 text-center">
-                <a href="https://www.instagram.com/suntenniscoaching/" target="_blank"> <!-- 替換為您的 Instagram 頁面連結 -->
-                    <img src="images/instagram_qr_code.png" alt="Instagram QR Code" style="width: 200px; height: 200px;">
-                </a>
-                <p>關注我們的 Instagram</p>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
+        
 
-        
-        
     </main>
-</body>
-</html>

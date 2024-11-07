@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黃彥舒 - 學員介紹</title>
+    <meta name="description" content="學員黃彥舒的個人介紹及課程成就">
+    <link rel="stylesheet" href="path/to/bootstrap.css">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        /* 美化樣式 */
+        body {
+            background: linear-gradient(135deg, #f0f4f8, #dfe7ec);
+            font-family: Arial, sans-serif;
+        }
+        .student-intro {
+            padding: 40px 0;
+        }
+        .student-info {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .student-photo {
+            width: 200%;
+            max-width: 250px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        .section-heading h3 {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: #007bff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .section-heading p.desc {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        hr {
+            border-top: 2px solid #007bff;
+            width: 50%;
+            margin: 15px auto;
+        }
+        /* 圖表區塊和動畫效果 */
+        .radar-chart-container {
+            background: linear-gradient(135deg, #e9f5ff, #f5fbff);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInScale 0.6s ease-out forwards;
+        }
+        /* 圖表動畫效果 */
+        @keyframes fadeInScale {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Main Navigation" class="p-3 text-center">
+            <a href="index.html" class="back-link btn btn-outline-primary">返回主頁</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="student-intro section">
+            <div class="container">
+                <div class="row">
+                    <!-- 左側：照片與介紹 -->
+                    <div class="col-md-6 d-flex flex-column align-items-center">
+                        <div class="student-info">
+                            <img src="images/student_huang_yan_shu.jpg" alt="黃彥舒的照片" class="student-photo">
+                            <h2>黃彥舒</h2>
+                            <p><strong>課程：</strong>進階課程</p>
+                            <p>「黃彥舒的網球之魂！」六大能力如同星辰般閃耀勾勒出一位網球鬥士的輪廓，織成了一張無懈可擊的戰鬥網。</p>
+                            <p>每一條邊界都是他磨練的痕跡，每一個數據點都是他進步的見證！</p>
+                        </div>
+                    </div>
+
+                    <!-- 右側：能力雷達圖 -->
+                    <div class="col-md-6">
+                        <section id="ability-chart" class="section">
+                            <div class="section-heading text-center">
+                                <h3 class="title-ch">六大能力圖</h3>
+                                <hr>
+                            </div>
+                            <div class="radar-chart-container">
+                                <canvas id="abilityRadarChart" width="700" height="700"></canvas>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chart.js 脚本，用於顯示個人能力雷達圖 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+const ctx = document.getElementById('abilityRadarChart').getContext('2d');
+const myRadarChart = new Chart(ctx, {
+    type: 'radar',
+    data: {
+        labels: ['抽球', '發球', '截擊', '鬥志', '速度', '切球'],
+        datasets: [{
+            label: '能力值',
+            data: [9, 7, 4, 6, 8, 5],
+            fill: true,
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',  // 更清晰的邊框顏色
+            pointBackgroundColor: '#36a2eb',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgba(54, 162, 235, 1)'
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        elements: {
+            line: {
+                borderWidth: 4  // 將邊框寬度加粗到 4
+            }
+        },
+        scales: {
+            r: {
+                angleLines: {
+                    color: 'rgba(100, 100, 100, 0.6)' // 設置更深的角度線顏色
+                },
+                grid: {
+                    color: 'rgba(100, 100, 100, 0.3)' // 設置更清晰的網格顏色
+                },
+                pointLabels: {
+                    font: {
+                        size: 18,
+                        weight: 'bold'
+                    },
+                    color: '#444'
+                },
+                suggestedMin: 0,
+                suggestedMax: 10
+            }
+        },
+
+
+        plugins: {
+            legend: {
+                position: 'top', // 將圖例放在圖表上方
+                //align: 'end',    // 將圖例向右對齊
+                labels: {
+                    font: {
+                        size: 18
+                    },
+                    color: '#333'
+                }
+            }
+        }
+    }
+});
+    </script>
+</body>
+</html>
